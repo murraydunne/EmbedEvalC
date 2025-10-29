@@ -1,6 +1,10 @@
 # EmbedEvalC
 EmbedEvalC is a dataset for evaluating LLM C code generation. It contains test cases from open source projects (specifically [OpenSSL](https://github.com/openssl/openssl)), hand designed parsing challenges from network standards, and modified problems from [EvalPlus](https://github.com/evalplus/evalplus). Specifically EvalPlus's [HumanEvalPlus](https://github.com/evalplus/humanevalplus_release) dataset.
 
+## Contributors
+
+Contributors include Murray Dunne and two others. Thier names will be added here pending thier consent to posting their names.
+
 ## Usage
 
 To generate code with an LLM using the EmbedEvalC dataset, first add the invocation of your LLM to `generate_embedevalc.py`, then run it.
