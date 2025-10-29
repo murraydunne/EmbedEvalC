@@ -3,7 +3,7 @@ EmbedEvalC is a dataset for evaluating LLM C code generation. It contains test c
 
 ## Contributors
 
-Contributors include Murray Dunne and two others. Thier names will be added here pending thier consent to posting their names.
+Contributors include Murray Dunne and two others. Thier names will be added here pending their consent to posting their names.
 
 ## Usage
 
