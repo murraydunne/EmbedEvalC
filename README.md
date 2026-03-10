@@ -7,7 +7,9 @@ Contributors: Murray Dunne, Kylee Schram, Sebastian Fischmeister.
 
 ## Usage
 
-To generate code with an LLM using the EmbedEvalC dataset, first add the invocation of your LLM to `generate_embedevalc.py`. For example, you might alter it as follows:
+To generate code with an LLM using the EmbedEvalC dataset, first ensure you have GCC installed, and then download HumanEvalPlus-Mini.jsonl from EvalPlus and place it in the current directory.
+
+Then add the invocation of your LLM to `generate_embedevalc.py`. For example, you might alter it as follows:
 
 ```Python
 def invoke_LLM_here(code_prompt):
@@ -19,11 +21,34 @@ def invoke_LLM_here(code_prompt):
 
     return result
 ```
-Once you have made your changes, run the file.
+You may also wish to adjust the directory constant defined in that file as follows:
+```Python
+llm_result_directory = 'some-llms-results/'
+```
+Once you have made your changes, run the `generate_embedevalc.py` file (in the directory this README file is in) to run the LLM against the EmbedEvalC dataset.
 
- then run it.
+Once the script has finished running, you will be left with generated code in a directory structure as follows:
+```
+some-llms-results/
+    0/
+        0.c
+        1.c
+        ...
+        [n].c
+    1/
+        0.c
+        1.c
+        ...
+        [n].c
+    ...
+    45/
+        0.c
+        1.c
+        ...
+        [n].c
+```
 
-To test that generated code, run `test_embedevalc.py` in a containerized or other jailed environment for safety and security.
+To generate a `.csv` of the test results for each run **ENSURE YOU ARE IN A CONTAINERIZED OR OTHER RESTRICTED/JAILED ENVIRONMENT** and then run `test_embedevalc.py some-llms-results/ > your-result-file.csv`. It is dangerous to run untrusted generated C code in your regular working environment.
 
 ## Changes
 
