@@ -7,7 +7,21 @@ Contributors: Murray Dunne, Kylee Schram, Sebastian Fischmeister.
 
 ## Usage
 
-To generate code with an LLM using the EmbedEvalC dataset, first add the invocation of your LLM to `generate_embedevalc.py`, then run it.
+To generate code with an LLM using the EmbedEvalC dataset, first add the invocation of your LLM to `generate_embedevalc.py`. For example, you might alter it as follows:
+
+```Python
+def invoke_LLM_here(code_prompt):
+
+    my_prompt_prefix = "Continue the C code given directly in a markdown code block. " +\
+        "No prose, no explanation. Output only C code.\n\n"
+    prompt = my_prompt_prefix + code_prompt
+    result = invoke_my_llm(prompt)
+
+    return result
+```
+Once you have made your changes, run the file.
+
+ then run it.
 
 To test that generated code, run `test_embedevalc.py` in a containerized or other jailed environment for safety and security.
 

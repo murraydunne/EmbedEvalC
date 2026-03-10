@@ -14,7 +14,14 @@ short_test = False
 if len(sys.argv) <= 1 or sys.argv[1] == 'help' or sys.argv[1] == '-help' or sys.argv[1] == '--help':
     print("""
 Usage:
-    python3 test_embedevalc.py [path_to_llm_generated_code] [-v]
+    python3 test_embedevalc.py [path_to_llm_generated_code/] [-v]
+
+    ******************************
+    **** EXTREMELY IMPORTANT: ****
+    ******************************
+    ENSURE YOU ARE IN A CONTAINERIZED OR OTHER RESTRICTED/JAILED ENVIRONMENT
+    ENSURE YOU ARE IN A CONTAINERIZED OR OTHER RESTRICTED/JAILED ENVIRONMENT
+    ENSURE YOU ARE IN A CONTAINERIZED OR OTHER RESTRICTED/JAILED ENVIRONMENT
           
     IMPORTANT: you must download HumanEvalPlus.jsonl from EvalPlus and include it in the same directory as this file.
           
@@ -54,7 +61,7 @@ testing_string = """
 static int ___test_pass_count = 0;
 void ___assert_function(int sum, const char* text) {
     ___test_pass_count += sum;
-    //if(sum == 0) {
+    //if(sum == 0) { // uncomment for debugging
     //    printf("Failed %s\\n", text);
     //}
 }
