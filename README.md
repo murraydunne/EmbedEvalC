@@ -48,7 +48,7 @@ some-llms-results/
         [n].c
 ```
 
-To generate a `.csv` of the test results for each run **ENSURE YOU ARE IN A CONTAINERIZED OR OTHER RESTRICTED/JAILED ENVIRONMENT** and then run `test_embedevalc.py some-llms-results/ > your-result-file.csv`. It is dangerous to run untrusted generated C code in your regular working environment.
+To generate a `.csv` of the test results for each run **ENSURE YOU ARE IN A CONTAINERIZED OR OTHER RESTRICTED/JAILED ENVIRONMENT** and then run `test_embedevalc.py some-llms-results/ > your-result-file.csv` in the same directory as this README file. It is dangerous to run untrusted generated C code in your regular working environment.
 
 ## Changes
 
